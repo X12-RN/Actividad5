@@ -17,6 +17,7 @@ set(SOURCES
         sum.h
         sub.h
         div.h
+        mult.h
 )
 
 # Crear el ejecutable principal
@@ -58,9 +59,9 @@ if(ENABLE_TESTING)
     endfunction()
 
     # Archivos de pruebas
-    add_test_executable(test_sum test/test_sum.cpp)
-    add_test_executable(test_sub test/test_sub.cpp)
-    add_test_executable(test_divide test/test_divide.cpp)
+    add_executable(unit_tests test/test_sum.cpp test/test_sub.cpp test/test_divide.cpp test/test_mult.cpp)
+    target_link_libraries(unit_tests PRIVATE gtest_main)
+    add_test(NAME unit_tests COMMAND unit_tests)
 
     # Generar reportes de cobertura
     if (ENABLE_COVERAGE)

@@ -1,3 +1,4 @@
+\
 /*
  * Copyright (C) 2025 Tec de Monterrey
  *
@@ -6,16 +7,12 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <math.h>
 #include <stdexcept>
 
 /**
-  metodo para realizar divisiones de dos numeros
+  metodo para realizar multiplicaciones de dos numeros
  */
-double divide(int x, int y)
+double multiply(int x, int y)
 {
-    if (y != 0)
-        return static_cast<double>(x) / y; // Cast to double for floating point division
-    else
-        throw std::invalid_argument("Division by zero");
+    return x * y;
 }

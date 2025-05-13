@@ -3,7 +3,6 @@
 
 TEST(SubTest, HandlesPositiveInput)
 {
-int resta = sub(5, 1);
-
-EXPECT_EQ(resta, 4);
+    double resta = sub(5, 1); // Changed to double
+    EXPECT_DOUBLE_EQ(resta, 4.0); // Use EXPECT_DOUBLE_EQ and compare with double
 }

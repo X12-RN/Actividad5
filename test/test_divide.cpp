@@ -1,16 +1,14 @@
 #include <gtest/gtest.h>
 #include "div.h"
+#include <stdexcept> // Required for std::invalid_argument
 
 TEST(DivTest, HandlesPositiveInput)
 {
-int result = divide(9, 3);
-
-EXPECT_EQ(result, 3);
+    double result = divide(9, 3); // Changed to double to match function return type
+    EXPECT_DOUBLE_EQ(result, 3.0); // Use EXPECT_DOUBLE_EQ for double comparison
 }
 
 TEST(DivTest, HandlesZeroInput)
 {
-int result = divide(9, 0);
-
-EXPECT_EQ(result, 0);
+    EXPECT_THROW(divide(9, 0), std::invalid_argument);
 }

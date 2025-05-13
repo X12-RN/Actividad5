@@ -3,7 +3,6 @@
 
 TEST(SumTest, HandlesPositiveInput)
 {
-int suma = sum(1, 5);
-
-EXPECT_EQ(suma, 6);
+    double suma = sum(1, 5); // Changed to double
+    EXPECT_DOUBLE_EQ(suma, 6.0); // Use EXPECT_DOUBLE_EQ and compare with double
 }
