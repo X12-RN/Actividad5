@@ -15,7 +15,7 @@
 double divide(int x, int y)
 {
     if (y != 0)
-        return static_cast<double>(x) / y; // Cast to double for floating point division
+        return x / y;
     else
-        throw std::invalid_argument("Division by zero");
+        return 0;
 }
